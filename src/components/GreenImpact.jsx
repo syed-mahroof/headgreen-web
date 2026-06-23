@@ -216,10 +216,10 @@ export default function GreenImpact() {
         <div className="w-full lg:w-1/2 grid gap-4">
 
           {/* CO₂ card — radial arc */}
-          <div className="rounded-2xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/[0.06] p-5 flex items-center gap-6 transition-all duration-300 hover:border-emerald-500/30 dark:hover:border-emerald-500/25">
+          <div className="rounded-2xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/[0.06] p-4 sm:p-5 flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 transition-all duration-300 hover:border-emerald-500/30 dark:hover:border-emerald-500/25 text-center sm:text-left">
             <RadialArc value={co2} max={employees <= 100 ? 20000 : employees <= 500 ? 100000 : 500000} />
-            <div className="flex-1">
-              <div className="text-2xl font-mono font-bold tracking-tighter text-slate-900 dark:text-white">
+            <div className="flex-1 w-full">
+              <div className="text-2xl font-mono font-bold tracking-tighter text-slate-900 dark:text-white flex items-baseline justify-center sm:justify-start">
                 <CountUp end={co2} duration={1.2} separator="," preserveValue />
                 <span className="text-base ml-1 text-slate-400 dark:text-zinc-500 font-normal">kg</span>
               </div>

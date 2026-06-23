@@ -20,6 +20,7 @@ export default function Home() {
         title="Corporate EV Fleet Kochi | Zero-Emission Employee Transport" 
         description="HeadGreen is Kochi's premier corporate EV fleet. We provide 100% zero-emission electric cab services for employee transport in Infopark & SmartCity." 
         schemaType="Organization" 
+        path="/"
       />
       <Hero />
       <TrustBar />

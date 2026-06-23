@@ -122,6 +122,7 @@ export default function About() {
         title="Sustainable Corporate Fleet Kerala | Our Green Mobility Mission" 
         description="Discover how HeadGreen is leading carbon-neutral employee commuting in Kochi. We partner with IT companies to reduce corporate transport carbon footprints." 
         schemaType="Organization" 
+        path="/about"
       />
       {/* ── PAGE HERO ── */}
       <PageHero

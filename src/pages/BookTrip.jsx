@@ -119,6 +119,7 @@ export default function BookTrip() {
         title="Book Corporate Electric Cabs | EV Airport Transfers Kochi" 
         description="Book on-demand zero-emission EV airport transfers and corporate rides in Kochi. Fast, reliable, and 100% electric." 
         schemaType="Action" 
+        path="/book"
       />
       <PageHero
         label="On-Demand EV Rides"

@@ -63,8 +63,8 @@ export default function Hero() {
         >
           <div className="absolute h-80 w-80 rounded-full bg-primary/20 opacity-30 dark:opacity-100 blur-3xl" />
           <div className="bg-white dark:bg-[#050816] rounded-2xl border border-slate-200/80 dark:border-white/[0.08] shadow-xl shadow-slate-200/40 dark:shadow-[0_0_40px_rgba(16,185,129,0.15)] overflow-hidden relative animate-float max-w-lg">
-            <img src={fleetLight} alt="Tata Nexon EV Corporate Fleet" className="block dark:hidden w-full h-full object-cover transition-opacity duration-500" />
-            <img src={fleetDark} alt="Tata Nexon EV Corporate Fleet" className="hidden dark:block w-full h-full object-cover transition-opacity duration-500" />
+            <img src={fleetLight} alt="Tata Nexon EV Corporate Fleet vehicle - HeadGreen" className="block dark:hidden w-full h-full object-cover transition-opacity duration-500" />
+            <img src={fleetDark} alt="Tata Nexon EV Corporate Fleet vehicle - HeadGreen" className="hidden dark:block w-full h-full object-cover transition-opacity duration-500" />
             <div className="mt-3 px-2 pb-3 space-y-2">
               <div className="flex items-center justify-between text-xs tracking-wider uppercase font-mono">
                 <div className="text-muted">HeadGreen Fleet</div>

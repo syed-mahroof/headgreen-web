@@ -108,6 +108,7 @@ export default function Corporate() {
         title="B2B Electric Cab Service & Corporate Mobility | HeadGreen" 
         description="Streamline your enterprise logistics with HeadGreen's zero-emission corporate mobility solutions. Reliable B2B employee transport services across Kerala." 
         schemaType="Service" 
+        path="/corporate"
       />
       {/* ── PAGE HERO ─────────────────────────────────────────── */}
       <PageHero
