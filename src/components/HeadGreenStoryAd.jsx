@@ -56,7 +56,7 @@ function Scene2() {
     { num: "1.5M+", label: "Green Kilometres",  sub: "Zero tailpipe emissions", delay: "0.08s" },
     { num: "99%",   label: "On-Time Rate",       sub: "Every pick-up & drop-off", delay: "0.20s" },
     { num: "10+",   label: "Corporate Clients",  sub: "Infopark · SmartCity",    delay: "0.32s" },
-    { num: "100%",  label: "Electric Fleet",     sub: "Solar-charged grid",      delay: "0.44s" },
+    { num: "20+",   label: "EV Fleet",           sub: "Solar-charged grid",      delay: "0.44s" },
   ];
   return (
     <>

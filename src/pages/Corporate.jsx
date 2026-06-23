@@ -105,16 +105,16 @@ export default function Corporate() {
   return (
     <>
       <SEO 
-        title="Enterprise EV Fleet Management & Employee Transits" 
-        description="Upgrade your corporate mobility with HeadGreen's dedicated enterprise EV fleet. Live tracking, zero dead mileage, and massive carbon savings for B2B logistics." 
+        title="B2B Electric Cab Service & Corporate Mobility | HeadGreen" 
+        description="Streamline your enterprise logistics with HeadGreen's zero-emission corporate mobility solutions. Reliable B2B employee transport services across Kerala." 
         schemaType="Service" 
       />
       {/* ── PAGE HERO ─────────────────────────────────────────── */}
       <PageHero
         label="Corporate Solutions"
-        title="Move your team with"
-        accent="zero emissions"
-        subtitle="Dedicated electric fleets, attendance integration, live tracking and a dashboard your ops team will actually love."
+        title="Zero-Emission"
+        accent="Corporate Mobility Solutions"
+        subtitle="Seamlessly integrate our B2B electric cab service into your daily operations. From Infopark employee transit to corporate airport transfers, achieve your ESG goals effortlessly."
       >
         <div className="mt-8 flex flex-wrap gap-3">
           <ValuePill icon={Building2}   label="Dedicated EV Fleet"      />
@@ -142,9 +142,9 @@ export default function Corporate() {
 
             <SectionLabel>Request a Demo</SectionLabel>
             <h2 className="mt-5 font-syne text-2xl font-light tracking-tight md:text-3xl text-slate-900 dark:text-white leading-[1.2]">
-              See the platform{" "}
+              Request Your{" "}
               <span className="font-extrabold text-slate-900 dark:text-white">
-                live in 30 minutes
+                Corporate EV Fleet Demo
               </span>
             </h2>
             <p className="mt-2 text-sm text-slate-500 dark:text-zinc-500">

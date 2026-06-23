@@ -116,15 +116,15 @@ export default function BookTrip() {
   return (
     <>
       <SEO 
-        title="Book an EV Ride - HeadGreen!" 
-        description="Plan your zero-emission trip across Kochi. Confirm your electric ride on WhatsApp in minutes. No account, no app needed." 
+        title="Book Corporate Electric Cabs | EV Airport Transfers Kochi" 
+        description="Book on-demand zero-emission EV airport transfers and corporate rides in Kochi. Fast, reliable, and 100% electric." 
         schemaType="Action" 
       />
       <PageHero
         label="On-Demand EV Rides"
-        title="Plan your trip,"
-        accent="we handle the rest"
-        subtitle="Fill in the details below — we'll confirm your electric ride on WhatsApp in minutes. No account, no app needed."
+        title="Book On-Demand Corporate"
+        accent="EV Rides in Kochi"
+        subtitle="Need reliable B2B employee transport or executive airport transfers? Book our premium electric cab service in minutes and experience zero-emission corporate mobility."
       >
         <BenefitRow />
       </PageHero>

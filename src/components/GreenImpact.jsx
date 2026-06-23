@@ -168,7 +168,7 @@ export default function GreenImpact() {
   const trees = Math.round(co2 / 21);              // equiv trees / yr
 
   return (
-    <section className="section">
+    <section className="section relative">
       <Reveal className="mb-10 max-w-2xl">
         <SectionLabel index={4}>Carbon Impact Calculator</SectionLabel>
         <h2 className="mt-5 font-syne text-3xl font-light tracking-tight md:text-4xl lg:text-5xl leading-[1.15]">
@@ -178,10 +178,10 @@ export default function GreenImpact() {
         <p className="mt-3 text-muted">Drag the slider — see the exact CO₂, fuel and tree-equivalent impact your company generates each year with HeadGreen.</p>
       </Reveal>
 
-      <div className="rounded-3xl bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/[0.07] shadow-sm dark:shadow-none p-8 grid gap-10 lg:grid-cols-2 lg:items-center">
+      <div className="rounded-3xl bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/[0.07] shadow-sm dark:shadow-none p-5 sm:p-8 flex flex-col lg:flex-row gap-10 lg:items-center w-full">
 
         {/* ── Slider ── */}
-        <div>
+        <div className="w-full lg:w-1/2">
           <div className="mb-6 flex items-end justify-between">
             <div>
               <span className="text-[10px] uppercase tracking-widest font-semibold text-slate-400 dark:text-zinc-500 block mb-1">Employees</span>
@@ -199,7 +199,7 @@ export default function GreenImpact() {
           <input
             type="range" min={10} max={2000} step={10} value={employees}
             onChange={(e) => setEmployees(+e.target.value)}
-            className="custom-range"
+            className="custom-range w-full py-4 touch-none"
             style={{
               background: `linear-gradient(to right, #10b981 0%, #10b981 ${((employees - 10) / (2000 - 10)) * 100}%, var(--track-color) ${((employees - 10) / (2000 - 10)) * 100}%, var(--track-color) 100%)`
             }}
@@ -213,7 +213,7 @@ export default function GreenImpact() {
         </div>
 
         {/* ── Three metric cards ── */}
-        <div className="grid gap-4">
+        <div className="w-full lg:w-1/2 grid gap-4">
 
           {/* CO₂ card — radial arc */}
           <div className="rounded-2xl bg-slate-50 dark:bg-white/[0.03] border border-slate-200 dark:border-white/[0.06] p-5 flex items-center gap-6 transition-all duration-300 hover:border-emerald-500/30 dark:hover:border-emerald-500/25">

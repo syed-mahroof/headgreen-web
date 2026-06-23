@@ -119,16 +119,16 @@ export default function About() {
   return (
     <>
       <SEO 
-        title="Our Story | HeadGreen Mobility" 
-        description="HeadGreen operates on a closed-loop model: intercepting capable EVs at end-of-first-life, remanufacturing battery packs, and charging via solar grid." 
+        title="Sustainable Corporate Fleet Kerala | Our Green Mobility Mission" 
+        description="Discover how HeadGreen is leading carbon-neutral employee commuting in Kochi. We partner with IT companies to reduce corporate transport carbon footprints." 
         schemaType="Organization" 
       />
       {/* ── PAGE HERO ── */}
       <PageHero
         label="Our Story"
-        title="Built to decarbonise"
-        accent="Kochi's commute"
-        subtitle="HeadGreen operates on a closed-loop model: intercepting capable EVs at end-of-first-life, remanufacturing battery packs in-house, and charging every vehicle through a dedicated solar grid — bringing premium, zero-fossil corporate mobility to India's tech hubs."
+        title="Pioneering Sustainable Corporate"
+        accent="Fleets in Kerala"
+        subtitle="We are on a mission to deliver carbon-neutral employee commuting. By intercepting end-of-first-life EVs and powering them via solar grid, we offer green mobility partnerships that directly reduce your corporate transport carbon footprint."
       />
 
       {/* ── MISSION / VISION ── */}
@@ -139,13 +139,13 @@ export default function About() {
         <div className="grid gap-5 md:grid-cols-2">
           <PillarCard
             icon={Target} accent="MISSION"
-            title="Electrify every corporate commute"
-            body="To replace 1M+ petrol kilometres each year through a circular second-life fleet model — intercepting vehicles at peak usable age, remanufacturing them to specification, and running them on solar-charged infrastructure across South India's enterprise corridors."
+            title="Carbon-Neutral Employee Commuting"
+            body="To replace 1M+ petrol kilometres each year through a circular second-life fleet management model — intercepting vehicles at peak usable age, and running them on solar-charged infrastructure to eliminate tailpipe emissions."
           />
           <PillarCard
             icon={Eye} accent="VISION"
-            title="South India's default enterprise mobility OS"
-            body="To be the most trusted circular electro-mobility platform for forward-thinking companies — where HR, ops and employees all work from a single intelligent system, powered by zero-fossil, restorative infrastructure."
+            title="Kerala's Default Sustainable Corporate Fleet"
+            body="To be the most trusted green mobility partner for forward-thinking IT companies — where HR, operations, and employees all work from a single intelligent system to effortlessly achieve corporate ESG goals."
           />
         </div>
       </section>

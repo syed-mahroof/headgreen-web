@@ -10,14 +10,14 @@ import { SectionLabel } from "./SectionLabel.jsx";
 function OverviewTab() {
   const stats = [
     { label: "Active Trips", value: "184", delta: "+12", up: true },
-    { label: "Fleet Online", value: "92", delta: "+3", up: true },
+    { label: "Fleet Online", value: "19", delta: "+1", up: true },
     { label: "On-time", value: "98%", delta: "+0.4%", up: true },
   ];
   const feed = [
-    { plate: "KL-07-EV-1204", route: "Kakkanad → Infopark", status: "En Route", time: "ETA 4m" },
-    { plate: "KL-07-EV-0891", route: "SmartCity → Edapally", status: "Arrived", time: "2m ago" },
-    { plate: "KL-07-EV-2033", route: "Palarivattom → HiLite", status: "En Route", time: "ETA 11m" },
-    { plate: "KL-07-EV-0445", route: "MG Road → Infopark", status: "Charging", time: "—" },
+    { plate: "Tata Nexon EV", route: "Kakkanad → Infopark", status: "En Route", time: "ETA 4m" },
+    { plate: "Kia Carens Clavis", route: "SmartCity → Edapally", status: "Arrived", time: "2m ago" },
+    { plate: "Tata Tigor EV", route: "Palarivattom → HiLite", status: "En Route", time: "ETA 11m" },
+    { plate: "BYD e6", route: "MG Road → Infopark", status: "Charging", time: "—" },
   ];
   const statusColor = {
     "En Route": "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/20",
@@ -80,10 +80,10 @@ function CapacityMini({ pct }) {
 
 function FleetTab() {
   const vehicles = [
-    { plate: "KL-07-EV-1204", model: "Premium EV Sedan", status: "Online", battery: 87, trips: 14 },
-    { plate: "KL-07-EV-0891", model: "Executive EV", status: "Online", battery: 62, trips: 9 },
-    { plate: "KL-07-EV-2033", model: "Corporate Shuttle", status: "Online", battery: 45, trips: 7 },
-    { plate: "KL-07-EV-0445", model: "EV Hatchback", status: "Charging", battery: 23, trips: 3 },
+    { plate: "Tata Nexon EV", model: "Premium EV SUV", status: "Online", battery: 87, trips: 14 },
+    { plate: "Kia Carens Clavis", model: "Executive MUV", status: "Online", battery: 62, trips: 9 },
+    { plate: "Tata Tigor EV", model: "Corporate Sedan", status: "Online", battery: 45, trips: 7 },
+    { plate: "BYD e6", model: "Premium Shuttle", status: "Charging", battery: 23, trips: 3 },
   ];
   const statusDot = { Online: "bg-emerald-500", Charging: "bg-amber-500" };
   return (

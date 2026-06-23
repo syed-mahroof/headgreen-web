@@ -17,8 +17,8 @@ export default function Home() {
   return (
     <>
       <SEO 
-        title="Electric Corporate Fleet & Employee Cab Services in Kerala" 
-        description="Kochi's premier 100% zero-emission corporate fleet. AI-routed employee transport and enterprise EV logistics in Infopark & SmartCity." 
+        title="Corporate EV Fleet Kochi | Zero-Emission Employee Transport" 
+        description="HeadGreen is Kochi's premier corporate EV fleet. We provide 100% zero-emission electric cab services for employee transport in Infopark & SmartCity." 
         schemaType="Organization" 
       />
       <Hero />

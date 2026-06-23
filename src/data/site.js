@@ -110,9 +110,9 @@ export const TIMELINE = [
 ];
 
 export const STATS = [
-  { value: 120, suffix: "+", label: "EVs in Fleet" },
-  { value: 25, suffix: "+", label: "Corporate Clients" },
-  { value: 1500000, suffix: "+", label: "Green KMs Driven" },
+  { value: 20, suffix: "+", label: "EV Fleet" },
+  { value: 10, suffix: "+", label: "Corporate Clients" },
+  { value: 1.5, suffix: "M+", label: "Green KMs Driven" },
   { value: 98, suffix: "%", label: "On-time Rate" },
 ];
 
