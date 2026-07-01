@@ -1,19 +1,25 @@
 import { Helmet } from "react-helmet-async";
+import { keywordMap } from "../config/keywordMap.js";
 
 export default function SEO({ 
   title, 
   description, 
-  keywords = "EV cab service Kochi, corporate fleet Kerala, electric taxi Ernakulam, employee transport Infopark, HeadGreen mobility",
+  keywords,
   image = "https://headgreen.in/assets/logo.png", 
   path = "", 
   type = "website",
-  schemaType = null
+  schemaType = null,
+  noindex = false,
+  faqItems = []
 }) {
   const baseTitle = "HeadGreen! | 100% Electric Corporate Cabs & Fleet in Kochi";
   const fullTitle = title ? `${title} | HeadGreen!` : baseTitle;
   const defaultDesc = "Kochi's premier zero-emission corporate mobility platform. We provide dedicated EV fleets, employee transits, and airport shuttles for enterprises in Infopark & SmartCity.";
   const finalDesc = description || defaultDesc;
   const canonicalUrl = `https://headgreen.in${path}`;
+  
+  // Use explicit keywords if provided, else lookup from map, else fallback
+  const finalKeywords = keywords || keywordMap[path] || keywordMap["/"];
 
   const getStructuredData = () => {
     const schemas = [
@@ -52,8 +58,39 @@ export default function SEO({
             "name": "Corporate EV Fleet & Employee Transits"
           }
         }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Corporate EV Fleet Management",
+        "provider": {
+          "@type": "Organization",
+          "name": "HeadGreen!"
+        },
+        "areaServed": ["Kochi", "Kakkanad", "Ernakulam", "SmartCity"],
+        "serviceType": "Corporate Mobility"
       }
     ];
+
+    if (path && path !== "/") {
+      const pathParts = path.split('/').filter(Boolean);
+      let currentPath = "";
+      const breadcrumbItems = pathParts.map((part, index) => {
+        currentPath += `/${part}`;
+        return {
+          "@type": "ListItem",
+          "position": index + 1,
+          "name": part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, " "),
+          "item": `https://headgreen.in${currentPath}`
+        };
+      });
+
+      schemas.push({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": breadcrumbItems
+      });
+    }
 
     if (schemaType === "JobPosting" || schemaType === "Action") {
       schemas.push({
@@ -79,6 +116,21 @@ export default function SEO({
       });
     }
 
+    if (schemaType === "FAQPage" && faqItems.length > 0) {
+      schemas.push({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqItems.map(item => ({
+          "@type": "Question",
+          "name": item.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.answer
+          }
+        }))
+      });
+    }
+
     return (
       <script type="application/ld+json">
         {JSON.stringify(schemas)}
@@ -91,9 +143,9 @@ export default function SEO({
       {/* Standard Metadata */}
       <title>{fullTitle}</title>
       <meta name="description" content={finalDesc} />
-      <meta name="keywords" content={keywords} />
+      <meta name="keywords" content={finalKeywords} />
       <link rel="canonical" href={canonicalUrl} />
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
@@ -102,6 +154,7 @@ export default function SEO({
       <meta property="og:description" content={finalDesc} />
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content="HeadGreen!" />
+      <meta property="og:locale" content="en_IN" />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />

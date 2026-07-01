@@ -52,6 +52,8 @@ export default function BookTrip() {
   const [status, setStatus]     = useState(null);   // null | "success" | "error"
   const [errMsg, setErrMsg]     = useState("");
   const [turnstileToken, setTurnstileToken] = useState(null);
+  
+  const SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY || "1x00000000000000000000AA";
 
   const set = (k) => (e) => setFields((f) => ({ ...f, [k]: e.target.value }));
 
@@ -117,7 +119,7 @@ export default function BookTrip() {
     <>
       <SEO 
         title="Book Corporate Electric Cabs | EV Airport Transfers Kochi" 
-        description="Book on-demand zero-emission EV airport transfers and corporate rides in Kochi. Fast, reliable, and 100% electric." 
+        description="Book on-demand zero-emission EV airport transfers and corporate rides in Kochi. Fast, reliable, and 100% electric. Reserve your green cab today!" 
         schemaType="Action" 
         path="/book"
       />
@@ -216,10 +218,11 @@ export default function BookTrip() {
                   </div>
 
                   {/* Turnstile CAPTCHA */}
-                  <div className="flex justify-center my-4">
+                  <div className="flex justify-center my-4 min-h-[65px]">
                     <Turnstile
-                      siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+                      siteKey={SITE_KEY}
                       onSuccess={(token) => setTurnstileToken(token)}
+                      onError={() => setErrMsg("Security widget failed to load. Please disable adblockers or refresh.")}
                       options={{ theme: "auto" }}
                     />
                   </div>

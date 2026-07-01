@@ -7,8 +7,9 @@ import orionLogo from "../assets/OrionInnovation.webp";
 import servesysLogo from "../assets/servesys.png";
 import wiproLogo from "../assets/wipro.svg";
 import zellisLogo from "../assets/zellis-logo-white.svg";
-import titanLogo from "../assets/Titan-Tech-Emirates-White-Logo.png";
+import titanLogo from "../assets/titan-logo.svg";
 import adhilLogo from "../assets/ADHIL LOGO.png";
+import dcnLogo from "../assets/dcn_logo.png";
 
 const LOGOS = [
   { name: "Cognizant", src: cogLogo, isBlack: true }, // Naturally dark, needs white in Dark Mode
@@ -18,8 +19,9 @@ const LOGOS = [
   { name: "Servesys", src: servesysLogo, isWhite: true }, // Naturally white, needs black in Light Mode
   { name: "Wipro", src: wiproLogo },
   { name: "Zellis", src: zellisLogo, isWhite: true }, // Naturally white, needs black in Light Mode
-  { name: "Titan", src: titanLogo, isWhite: true },
+  { name: "Titan", src: titanLogo, isBlack: true },
   { name: "Adhil", src: adhilLogo, isWhite: true },
+  { name: "Dodge Construction Network", src: dcnLogo, isBlack: true },
 ];
 
 export default function TrustBar() {

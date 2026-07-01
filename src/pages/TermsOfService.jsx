@@ -1,9 +1,16 @@
 import { Reveal, fadeUp } from "../components/motion.jsx";
+import SEO from "../components/SEO.jsx";
 
 export default function TermsOfService() {
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-[#050816] text-slate-900 dark:text-white pt-32 pb-24 px-6">
+    <>
+      <SEO 
+        title="Terms of Service | HeadGreen Corporate Mobility" 
+        description="Read the HeadGreen Terms of Service. Understand the user responsibilities, driver obligations, and policies for our B2B zero-emission corporate fleets." 
+        path="/terms"
+      />
+      <div className="min-h-screen bg-slate-50 dark:bg-[#050816] text-slate-900 dark:text-white pt-32 pb-24 px-6">
       <div className="max-w-3xl mx-auto space-y-8">
         <Reveal variant={fadeUp}>
           <h1 className="text-4xl font-bold mb-8">Terms of Service</h1>
@@ -50,5 +57,6 @@ export default function TermsOfService() {
         </Reveal>
       </div>
     </div>
+    </>
   );
 }

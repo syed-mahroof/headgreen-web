@@ -41,6 +41,21 @@ const EMPTY = {
 };
 
 // ─── Page ─────────────────────────────────────────────────────────
+const FAQ_ITEMS = [
+  {
+    question: "How does HeadGreen calculate carbon savings?",
+    answer: "HeadGreen tracks the exact distance covered by our 100% electric fleet during your corporate commutes. We then compare the energy used against the emissions of a standard diesel or petrol fleet of similar size, providing you with real-time, accurate carbon offset reports for your ESG compliance."
+  },
+  {
+    question: "What EV models are in the fleet?",
+    answer: "Our premium fleet includes the Tata Nexon EV, Tata Tigor EV, Kia Carens Clavis, Citroën ëC3, and the BYD e6. We offer sedans, hatchbacks, SUVs, and corporate shuttles/MUVs to match any employee transit requirement."
+  },
+  {
+    question: "Do you serve Infopark and SmartCity?",
+    answer: "Yes, we specialize in corporate mobility for IT hubs in Kochi. We have dedicated fleet routing optimized for both Infopark (Kakkanad) and SmartCity, ensuring punctual and seamless employee transport."
+  }
+];
+
 export default function Corporate() {
   const [fields, setFields]     = useState(EMPTY);
   const [method, setMethod]     = useState("email");
@@ -48,6 +63,8 @@ export default function Corporate() {
   const [status, setStatus]     = useState(null);   // null | "success" | "error"
   const [errMsg, setErrMsg]     = useState("");
   const [turnstileToken, setTurnstileToken] = useState(null);
+  
+  const SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY || "1x00000000000000000000AA";
 
   const set = (k) => (e) => setFields((f) => ({ ...f, [k]: e.target.value }));
 
@@ -107,7 +124,8 @@ export default function Corporate() {
       <SEO 
         title="B2B Electric Cab Service & Corporate Mobility | HeadGreen" 
         description="Streamline your enterprise logistics with HeadGreen's zero-emission corporate mobility solutions. Reliable B2B employee transport services across Kerala." 
-        schemaType="Service" 
+        schemaType="FAQPage" 
+        faqItems={FAQ_ITEMS}
         path="/corporate"
       />
       {/* ── PAGE HERO ─────────────────────────────────────────── */}
@@ -135,6 +153,24 @@ export default function Corporate() {
 
       {/* ── PLATFORM SECTION ─────────────────────────────────── */}
       <CorporateSection />
+
+      {/* ── FAQ SECTION ──────────────────────────────────────── */}
+      <section className="section bg-slate-50 dark:bg-[#03050c] border-y border-slate-200/50 dark:border-white/[0.02]">
+        <div className="mx-auto max-w-3xl px-6">
+          <SectionLabel index={4}>Frequently Asked Questions</SectionLabel>
+          <h2 className="mt-5 font-syne text-3xl font-light tracking-tight md:text-4xl text-slate-900 dark:text-white mb-8">
+            Common <span className="font-extrabold">Queries</span>
+          </h2>
+          <div className="space-y-6">
+            {FAQ_ITEMS.map((faq, idx) => (
+              <div key={idx} className="rounded-2xl bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-white/[0.06] p-6 shadow-sm dark:shadow-none">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{faq.question}</h3>
+                <p className="text-sm text-slate-600 dark:text-zinc-400 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ── DEMO REQUEST FORM ────────────────────────────────── */}
       <section className="section">
@@ -219,10 +255,11 @@ export default function Corporate() {
                   </div>
 
                   {/* Turnstile CAPTCHA */}
-                  <div className="flex justify-center my-4">
+                  <div className="flex justify-center my-4 min-h-[65px]">
                     <Turnstile
-                      siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+                      siteKey={SITE_KEY}
                       onSuccess={(token) => setTurnstileToken(token)}
+                      onError={() => setErrMsg("Security widget failed to load. Please disable adblockers or refresh.")}
                       options={{ theme: "auto" }}
                     />
                   </div>

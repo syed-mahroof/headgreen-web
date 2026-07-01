@@ -12,6 +12,9 @@ import SplashScreen from "./components/SplashScreen.jsx";
 import Careers from "./components/Careers.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import TermsOfService from "./pages/TermsOfService.jsx";
+import Blog from "./pages/Blog.jsx";
+import LocationInfopark from "./pages/LocationInfopark.jsx";
+import LocationSmartCity from "./pages/LocationSmartCity.jsx";
 
 // Show splash once per browser session (not on every SPA navigation)
 const SPLASH_KEY = "hg_splash_done";
@@ -50,6 +53,9 @@ export default function App() {
           <Route path="/partner" element={<Partner />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/kochi-infopark" element={<LocationInfopark />} />
+          <Route path="/smartcity-kakkanad" element={<LocationSmartCity />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

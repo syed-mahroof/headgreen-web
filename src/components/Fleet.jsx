@@ -19,11 +19,11 @@ import { Reveal } from "./motion.jsx";
 import { SectionLabel } from "./SectionLabel.jsx";
 
 // ─── Vehicle asset imports (Vite resolves → hashed production URLs) ──
-import imgTigorEV    from "../assets/Tata Tigor EV sedan.png";
-import imgNexonEV    from "../assets/tata nexon ev.png";
-import imgCitroenEC3 from "../assets/citroen ec3 EV.png";
-import imgBYDE6      from "../assets/byd e6 ev.png";
-import imgKiaCarens  from "../assets/Kia Carens Clavis.png";
+import imgTigorEV    from "../assets/Tata Tigor EV sedan.webp";
+import imgNexonEV    from "../assets/tata nexon ev.webp";
+import imgCitroenEC3 from "../assets/citroen ec3 EV.webp";
+import imgBYDE6      from "../assets/byd e6 ev.webp";
+import imgKiaCarens  from "../assets/Kia Carens Clavis.webp";
 
 // ─── Layout hook ─────────────────────────────────────────────
 function useCardLayout() {
@@ -305,6 +305,9 @@ function FleetCard({ card, index, cardWidth, isActive, onClick }) {
         <img
           src={card.image}
           alt={`${card.name} — ${card.model}`}
+          width="400"
+          height="190"
+          loading="lazy"
           className="relative w-auto object-contain z-20 transition-all duration-400 ease-out will-change-transform drop-shadow-[0_16px_14px_rgba(0,0,0,0.22)] lg:group-hover:-translate-y-2 lg:group-hover:scale-[1.05] lg:group-hover:drop-shadow-[0_30px_20px_rgba(0,0,0,0.35)] group-data-[active=true]:-translate-y-2 group-data-[active=true]:scale-[1.05] group-data-[active=true]:drop-shadow-[0_30px_20px_rgba(0,0,0,0.35)]"
           style={{
             height: 190,

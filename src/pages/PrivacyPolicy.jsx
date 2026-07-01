@@ -1,9 +1,16 @@
 import { Reveal, fadeUp } from "../components/motion.jsx";
+import SEO from "../components/SEO.jsx";
 
 export default function PrivacyPolicy() {
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-[#050816] text-slate-900 dark:text-white pt-32 pb-24 px-6">
+    <>
+      <SEO 
+        title="Privacy Policy | HeadGreen Corporate Mobility" 
+        description="Read the HeadGreen Privacy Policy. Learn how we protect your data, secure our EV fleet platform, and respect passenger privacy for corporate commutes." 
+        path="/privacy"
+      />
+      <div className="min-h-screen bg-slate-50 dark:bg-[#050816] text-slate-900 dark:text-white pt-32 pb-24 px-6">
       <div className="max-w-3xl mx-auto space-y-8">
         <Reveal variant={fadeUp}>
           <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
@@ -47,5 +54,6 @@ export default function PrivacyPolicy() {
         </Reveal>
       </div>
     </div>
+    </>
   );
 }

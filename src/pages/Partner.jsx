@@ -53,6 +53,8 @@ export default function Partner() {
   const [status, setStatus]     = useState(null);   // null | "success" | "error"
   const [errMsg, setErrMsg]     = useState("");
   const [turnstileToken, setTurnstileToken] = useState(null);
+  
+  const SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY || "1x00000000000000000000AA";
 
   const set = (k) => (e) => setFields((f) => ({ ...f, [k]: e.target.value }));
 
@@ -114,7 +116,7 @@ export default function Partner() {
     <>
       <SEO 
         title="Become a Driver Partner | HeadGreen!" 
-        description="Join Kochi's cleanest way to earn. Drive for premium corporate clients like Infopark enterprises with guaranteed trip volumes and zero dead hours." 
+        description="Join Kochi's cleanest way to earn. Drive for premium corporate clients like Infopark enterprises with guaranteed trip volumes. Apply as a driver today!" 
         schemaType="JobPosting" 
       />
       <PageHero
@@ -228,10 +230,11 @@ export default function Partner() {
                   </div>
 
                   {/* Turnstile CAPTCHA */}
-                  <div className="flex justify-center my-4">
+                  <div className="flex justify-center my-4 min-h-[65px]">
                     <Turnstile
-                      siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+                      siteKey={SITE_KEY}
                       onSuccess={(token) => setTurnstileToken(token)}
+                      onError={() => setErrMsg("Security widget failed to load. Please disable adblockers or refresh.")}
                       options={{ theme: "auto" }}
                     />
                   </div>

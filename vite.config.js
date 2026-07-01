@@ -11,12 +11,22 @@ export default defineConfig({
         "/",
         "/about",
         "/corporate",
-        "/book"
+        "/book",
+        "/partner",
+        "/careers",
+        "/privacy",
+        "/terms",
+        "/blog",
+        "/kochi-infopark",
+        "/smartcity-kakkanad"
       ],
+      changefreq: "weekly",
+      priority: 0.8,
+      lastmod: new Date(),
       robots: [{
         userAgent: "*",
         allow: "/",
-        disallow: ["/admin", "/dashboard"]
+        disallow: ["/admin", "/dashboard", "/404"]
       }],
     })
   ],
