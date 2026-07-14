@@ -128,9 +128,15 @@ export default function About() {
       <PageHero
         label="Our Story"
         title="Pioneering Sustainable Corporate"
-        accent="Fleets in Kerala"
-        subtitle="We are on a mission to deliver carbon-neutral employee commuting. By intercepting end-of-first-life EVs and powering them via solar grid, we offer green mobility partnerships that directly reduce your corporate transport carbon footprint."
-      />
+        accent="EV Cabs in Kerala"
+        subtitle="We are on a mission to deliver carbon-neutral employee commuting and premium corporate mobility. By intercepting end-of-first-life EVs and powering them via solar grid, we offer green mobility partnerships that directly reduce your corporate transport carbon footprint."
+      >
+        <blockquote className="mt-8 border-l-2 border-emerald-500 pl-4 py-1">
+          <p className="font-syne tracking-[0.22em] text-sm font-bold uppercase text-slate-600 dark:text-zinc-400">
+            Drive <span className="text-emerald-500">Green</span>, Live <span className="text-emerald-500">Clean</span>
+          </p>
+        </blockquote>
+      </PageHero>
 
       {/* ── MISSION / VISION ── */}
       <section className="section py-16">
@@ -141,12 +147,12 @@ export default function About() {
           <PillarCard
             icon={Target} accent="MISSION"
             title="Carbon-Neutral Employee Commuting"
-            body="To replace 1M+ petrol kilometres each year through a circular second-life fleet management model — intercepting vehicles at peak usable age, and running them on solar-charged infrastructure to eliminate tailpipe emissions."
+            body="To replace 1M+ petrol kilometres each year through a circular second-life EV fleet management model. We intercept vehicles at peak usable age, and run them on solar-charged infrastructure to offer zero emission transit and corporate employee transportation Ernakulam."
           />
           <PillarCard
             icon={Eye} accent="VISION"
             title="Kerala's Default Sustainable Corporate Fleet"
-            body="To be the most trusted green mobility partner for forward-thinking IT companies — where HR, operations, and employees all work from a single intelligent system to effortlessly achieve corporate ESG goals."
+            body="To be the most trusted green mobility partner for forward-thinking IT companies — offering premium electric taxi Kerala services where HR, operations, and employees all work from a single intelligent system to effortlessly achieve corporate ESG goals."
           />
         </div>
       </section>

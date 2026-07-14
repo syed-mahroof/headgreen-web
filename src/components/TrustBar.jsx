@@ -43,7 +43,7 @@ export default function TrustBar() {
             <div key={`logo-${index}`} className="flex items-center justify-center mx-6 sm:mx-10 lg:mx-12">
               <img
                 src={logo.src}
-                alt={logo.name}
+                alt={`${logo.name} Corporate Client of HeadGreen EV Taxis`}
                 /* Base Idle State: Uniform Grey in Light Mode, Uniform Silver in Dark Mode */
                 /* Smart Hover State Logic */
                 className={`h-6 sm:h-8 lg:h-10 w-auto object-contain transition-all duration-300 cursor-pointer brightness-0 opacity-40 dark:invert dark:opacity-40 hover:scale-105 ${

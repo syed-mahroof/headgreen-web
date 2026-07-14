@@ -304,7 +304,7 @@ function FleetCard({ card, index, cardWidth, isActive, onClick }) {
         {/* The vehicle PNG — breaks top edge, scales + lifts on hover */}
         <img
           src={card.image}
-          alt={`${card.name} — ${card.model}`}
+          alt={`${card.name} — Premium EV taxi in Kochi, Kerala`}
           width="400"
           height="190"
           loading="lazy"

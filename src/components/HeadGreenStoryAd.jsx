@@ -37,10 +37,13 @@ function Scene1() {
       <div className="hg-s1-logo">
         <img
           src={hgLogo}
-          alt="HeadGreen! Logo"
+          alt="HeadGreen! Premium EV Cab Service Logo"
           className="hg-logo-main"
         />
         <div className="hg-brand-name">HeadGreen!</div>
+        <div className="font-syne mt-1 mb-1 text-[8.5px] font-bold uppercase tracking-[0.22em] text-[#539242] dark:text-[#539242]">
+          DRIVE GREEN, LIVE CLEAN
+        </div>
         <div className="hg-tagline text-slate-600 dark:text-white/60">EV Corporate Mobility · Kochi</div>
       </div>
       <div className="hg-s1-headline text-slate-600 dark:text-white/60" style={{ animationDelay: "0.9s" }}>
@@ -102,7 +105,7 @@ function Scene3() {
             className="hg-fleet-card bg-slate-900/5 dark:bg-white/5 border border-emerald-500/20 backdrop-blur-md"
             style={{ animationName: "hgCardIn", animationDuration: "0.5s", animationDelay: delay, animationFillMode: "both" }}
           >
-            <img src={imgSrc} alt={name} className="hg-fleet-img" />
+            <img src={imgSrc} alt={`${name} Corporate EV Fleet Kerala`} className="hg-fleet-img" />
             <div className="hg-fleet-name text-slate-600 dark:text-white/60">{name}</div>
             <div className="hg-fleet-badge text-[#00e87a] bg-emerald-500/10">{badge}</div>
           </div>
@@ -192,7 +195,7 @@ function Scene6({ onCtaClick }) {
         className="hg-cta-logo-row"
         style={{ animationName: "hgFadeUp", animationDuration: "0.5s", animationFillMode: "both" }}
       >
-        <img src={hgLogo} alt="HeadGreen! Logo" className="hg-logo-sm" />
+        <img src={hgLogo} alt="HeadGreen! Premium Corporate EV Cab Service Logo" className="hg-logo-sm" />
         <div className="hg-cta-logo-name">HeadGreen!</div>
       </div>
       <div

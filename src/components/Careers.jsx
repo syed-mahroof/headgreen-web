@@ -123,12 +123,15 @@ export default function Careers() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] max-w-3xl h-[60%] bg-emerald-500/10 dark:bg-[#00BA7C]/15 blur-[100px] rounded-full pointer-events-none" />
         
         <Reveal variant={fadeUp} className="relative z-10 max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold text-sm mb-8 border border-emerald-500/20">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold text-sm mb-4 border border-emerald-500/20">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
             Now Onboarding Drivers
+          </div>
+          <div className="font-syne tracking-[0.22em] text-xs font-bold uppercase text-slate-500 dark:text-zinc-500 mb-8">
+            Drive <span className="transition-colors duration-300 hover:text-emerald-500">Green</span>, Live <span className="transition-colors duration-300 hover:text-emerald-500">Clean</span>
           </div>
           
           <h1 className="font-syne text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8">

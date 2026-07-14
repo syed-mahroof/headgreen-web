@@ -192,7 +192,7 @@ export default function SplashScreen({ onDone }) {
               />
               <img
                 src={logoImg}
-                alt="HeadGreen logo"
+                alt="HeadGreen! Zero Emission Corporate Cabs in Kochi"
                 className="relative z-10 w-[88px] drop-shadow-2xl"
                 draggable={false}
               />
@@ -210,15 +210,20 @@ export default function SplashScreen({ onDone }) {
               </motion.div>
             </div>
 
-            {/* ── 4c. Tagline (fade + slide up) ─────────────────────── */}
-            <motion.p
-              className="mt-3 font-mono text-[10px] uppercase tracking-[0.28em] text-slate-500 dark:text-slate-400/80"
+            {/* ── 4c. Slogan & Tagline (fade + slide up) ─────────────────────── */}
+            <motion.div
+              className="mt-3 flex flex-col items-center gap-2"
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: TAGLINE_DELAY, duration: 0.7, ease: SILK }}
             >
-              EV Corporate Mobility · Kochi
-            </motion.p>
+              <div className="font-syne text-xs md:text-sm font-bold uppercase tracking-[0.22em] text-slate-900 dark:text-white">
+                DRIVE <span className="text-[#539242]">GREEN</span>, LIVE <span className="text-[#539242]">CLEAN</span>
+              </div>
+              <div className="font-mono text-[10px] uppercase tracking-[0.28em] text-slate-500 dark:text-slate-400/80">
+                EV Corporate Mobility · Kochi
+              </div>
+            </motion.div>
 
             {/* ── 4d. Thin divider ─────────────────────────────────── */}
             <motion.div
@@ -252,14 +257,19 @@ export default function SplashScreen({ onDone }) {
             </div>
 
             {/* ── 4f. "Loading" micro-label ─────────────────────────── */}
-            <motion.p
-              className="mt-3 font-mono text-[9px] uppercase tracking-[0.22em] text-slate-900 dark:text-white"
+            <motion.div
+              className="mt-4 flex flex-col items-center gap-1.5"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: PROGRESS_START - 0.2, duration: 0.5 }}
             >
-              Initialising platform…
-            </motion.p>
+              <p className="font-mono text-[9px] uppercase tracking-[0.22em] text-slate-900 dark:text-white">
+                Initialising platform…
+              </p>
+              <p className="font-syne text-[8px] font-bold uppercase tracking-[0.25em] text-slate-400 dark:text-slate-500">
+                Drive Green, Live Clean.
+              </p>
+            </motion.div>
           </div>
 
           {/* ── 5. Bottom-left version badge ──────────────────────── */}

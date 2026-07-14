@@ -14,8 +14,13 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
         >
-          <SectionLabel variant="slash">Kochi's EV Mobility Platform</SectionLabel>
+          <SectionLabel variant="slash">
+            <span className="font-syne tracking-[0.22em] text-xs font-bold uppercase text-slate-500 dark:text-zinc-400">
+              Drive <span className="text-emerald-500">Green</span>, Live <span className="text-emerald-500">Clean</span>
+            </span>
+          </SectionLabel>
           <h1 className="mt-6 font-display text-5xl font-light tracking-tight text-slate-900 dark:text-white leading-[1.05] md:text-5xl lg:text-6xl">
+            <span className="whitespace-nowrap">HeadGreen!<sup className="text-[0.4em] font-medium align-super opacity-70">&trade;</sup></span><br />
             Kochi's Premier Corporate EV Fleet<br />
             for{" "}
             <span className="font-extrabold text-slate-900 dark:text-white">Zero-Emission</span>{" "}
@@ -25,7 +30,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-slate-600 dark:text-zinc-400">
-            Upgrade your B2B electric cab service with our dedicated EV fleets. We help enterprises in Infopark and SmartCity hit their ESG goals with reliable, 100% zero tailpipe emission daily pickups and airport transfers.
+            Upgrade your B2B electric taxi service with our dedicated EV fleets. We help enterprises in Infopark and SmartCity hit their ESG goals with reliable, 100% zero tailpipe emission daily pickups, executive travel, and Cochin International Airport transfers.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link to="/corporate" className="btn-primary btn-shine overflow-hidden">
@@ -63,8 +68,8 @@ export default function Hero() {
         >
           <div className="absolute h-80 w-80 rounded-full bg-primary/20 opacity-30 dark:opacity-100 blur-3xl" />
           <div className="bg-white dark:bg-[#050816] rounded-2xl border border-slate-200/80 dark:border-white/[0.08] shadow-xl shadow-slate-200/40 dark:shadow-[0_0_40px_rgba(16,185,129,0.15)] overflow-hidden relative animate-float max-w-lg">
-            <img src={fleetLight} alt="Tata Nexon EV Corporate Fleet vehicle - HeadGreen" className="block dark:hidden w-full h-full object-cover transition-opacity duration-500" />
-            <img src={fleetDark} alt="Tata Nexon EV Corporate Fleet vehicle - HeadGreen" className="hidden dark:block w-full h-full object-cover transition-opacity duration-500" />
+            <img src={fleetLight} alt="Tata Nexon EV Corporate Fleet vehicle providing premium airport transfers in Cochin" className="block dark:hidden w-full h-full object-cover transition-opacity duration-500" />
+            <img src={fleetDark} alt="Tata Nexon EV Corporate Fleet vehicle providing premium airport transfers in Cochin" className="hidden dark:block w-full h-full object-cover transition-opacity duration-500" />
             <div className="mt-3 px-2 pb-3 space-y-2">
               <div className="flex items-center justify-between text-xs tracking-wider uppercase font-mono">
                 <div className="text-muted">HeadGreen Fleet</div>

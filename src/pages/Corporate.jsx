@@ -48,11 +48,11 @@ const FAQ_ITEMS = [
   },
   {
     question: "What EV models are in the fleet?",
-    answer: "Our premium fleet includes the Tata Nexon EV, Tata Tigor EV, Kia Carens Clavis, Citroën ëC3, and the BYD e6. We offer sedans, hatchbacks, SUVs, and corporate shuttles/MUVs to match any employee transit requirement."
+    answer: "Our premium fleet includes the Tata Nexon EV, Tata Tigor EV, Kia Carens Clavis, Citroën ëC3, and the BYD e6. We offer sedans, hatchbacks, SUVs, and corporate shuttles/MUVs to match any employee transit requirement, solidifying us as one of the best cab services in Kochi."
   },
   {
     question: "Do you serve Infopark and SmartCity?",
-    answer: "Yes, we specialize in corporate mobility for IT hubs in Kochi. We have dedicated fleet routing optimized for both Infopark (Kakkanad) and SmartCity, ensuring punctual and seamless employee transport."
+    answer: "Yes, we specialize in corporate mobility for IT hubs in Kochi. We have dedicated EV cabs routing optimized for both Infopark (Kakkanad) and SmartCity, ensuring punctual and seamless employee transport."
   }
 ];
 
@@ -133,9 +133,12 @@ export default function Corporate() {
         label="Corporate Solutions"
         title="Zero-Emission"
         accent="Corporate Mobility Solutions"
-        subtitle="Seamlessly integrate our B2B electric cab service into your daily operations. From Infopark employee transit to corporate airport transfers, achieve your ESG goals effortlessly."
+        subtitle="Seamlessly integrate our B2B electric cab service into your daily operations. From Infopark employee transit to premium cabs for premium clients and VIP transfers, achieve your ESG goals effortlessly with executive travel."
       >
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="font-syne mt-8 mb-4 tracking-[0.22em] text-xs font-bold uppercase text-slate-500 dark:text-zinc-400">
+          DRIVE <span className="text-emerald-500">GREEN</span>, LIVE <span className="text-emerald-500">CLEAN</span>
+        </div>
+        <div className="flex flex-wrap gap-3">
           <ValuePill icon={Building2}   label="Dedicated EV Fleet"      />
           <ValuePill icon={Users}       label="Attendance Integration"  />
           <ValuePill icon={Zap}         label="Live Dispatch"           />

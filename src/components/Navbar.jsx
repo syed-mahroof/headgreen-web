@@ -33,10 +33,15 @@ export default function Navbar() {
       >
         <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-6">
           <Link to="/" className="flex items-center gap-2 z-50" onClick={() => setOpen(false)}>
-            <img src={logo} alt="HeadGreen" className="h-9 w-auto" />
-            <span className="text-xl font-bold tracking-tight font-montserrat text-[#539242]">
-              HeadGreen!
-            </span>
+            <img src={logo} alt="HeadGreen! Premium EV Cab Service Logo" className="h-9 w-auto" />
+            <div className="flex flex-col">
+              <span className="text-xl font-bold tracking-tight font-montserrat text-[#539242] leading-none">
+                HeadGreen!<sup className="align-super text-[0.45em] font-medium opacity-70 tracking-normal">&trade;</sup>
+              </span>
+              <span className="font-syne mt-1 text-[7.5px] font-bold uppercase tracking-[0.22em] text-slate-500 dark:text-zinc-400">
+                DRIVE <span className="text-[#539242]">GREEN</span>, LIVE <span className="text-[#539242]">CLEAN</span>
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}

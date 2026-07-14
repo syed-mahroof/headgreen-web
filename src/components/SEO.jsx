@@ -5,16 +5,16 @@ export default function SEO({
   title, 
   description, 
   keywords,
-  image = "https://headgreen.in/assets/logo.png", 
+  image = "https://headgreen.in/og-image.png", 
   path = "", 
   type = "website",
   schemaType = null,
   noindex = false,
   faqItems = []
 }) {
-  const baseTitle = "HeadGreen! | 100% Electric Corporate Cabs & Fleet in Kochi";
+  const baseTitle = "HeadGreen! | Premium EV Cab Service & Corporate Taxis in Kochi, Kerala";
   const fullTitle = title ? `${title} | HeadGreen!` : baseTitle;
-  const defaultDesc = "Kochi's premier zero-emission corporate mobility platform. We provide dedicated EV fleets, employee transits, and airport shuttles for enterprises in Infopark & SmartCity.";
+  const defaultDesc = "Experience zero-emission airport transfers and executive employee transportation. The best premium electric taxi service for Infopark and SmartCity corporate mobility.";
   const finalDesc = description || defaultDesc;
   const canonicalUrl = `https://headgreen.in${path}`;
   
@@ -43,14 +43,14 @@ export default function SEO({
         "image": "https://headgreen.in/assets/logo.png",
         "url": "https://headgreen.in",
         "telephone": "+91-85898-44333",
-        "description": "Corporate Electric Vehicle mobility vendor specializing in sustainable employee transport and carbon-neutral fleet operations.",
+        "description": "Corporate Electric Vehicle mobility vendor specializing in premium electric taxi Kerala, sustainable employee transport, VIP transfers, and carbon-neutral EV fleets.",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Kochi",
           "addressRegion": "Kerala",
           "addressCountry": "IN"
         },
-        "areaServed": ["Kochi", "Kakkanad", "Ernakulam", "Kerala"],
+        "areaServed": ["Kochi", "Cochin", "Ernakulam", "Kerala", "Infopark", "SmartCity", "Cochin International Airport (COK)"],
         "makesOffer": {
           "@type": "Offer",
           "itemOffered": {
@@ -67,7 +67,7 @@ export default function SEO({
           "@type": "Organization",
           "name": "HeadGreen!"
         },
-        "areaServed": ["Kochi", "Kakkanad", "Ernakulam", "SmartCity"],
+        "areaServed": ["Kochi", "Cochin", "Ernakulam", "Kerala", "Infopark", "SmartCity", "Cochin International Airport (COK)"],
         "serviceType": "Corporate Mobility"
       }
     ];
@@ -151,7 +151,7 @@ export default function SEO({
       <meta property="og:type" content={type} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={finalDesc} />
+      <meta property="og:description" content={`Corporate employee transportation Ernakulam, VIP transfers, and premium cabs for premium clients. ${finalDesc}`} />
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content="HeadGreen!" />
       <meta property="og:locale" content="en_IN" />
@@ -160,7 +160,7 @@ export default function SEO({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={canonicalUrl} />
       <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={finalDesc} />
+      <meta name="twitter:description" content={`Premium electric taxi Kerala and corporate mobility. ${finalDesc}`} />
       <meta name="twitter:image" content={image} />
 
       {/* Structured Data / Schema.org */}

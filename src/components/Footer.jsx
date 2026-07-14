@@ -21,11 +21,14 @@ export default function Footer() {
           
           {/* Column 1: Brand/Bio */}
           <div className="flex flex-col items-start">
-            <div className="flex items-center gap-2 mb-6">
-              <img src={logo} alt="HeadGreen" className="h-9 w-auto" />
+            <div className="flex items-center gap-2 mb-2">
+              <img src={logo} alt="HeadGreen! Premium Corporate EV Cab Service Logo" className="h-9 w-auto" />
               <span className="text-xl font-bold tracking-tight font-montserrat text-[#539242]">
-                HeadGreen!
+                HeadGreen!<sup className="align-super text-[0.45em] font-medium opacity-70 tracking-normal">&trade;</sup>
               </span>
+            </div>
+            <div className="font-syne mb-6 tracking-[0.22em] text-xs font-bold uppercase text-slate-500 dark:text-zinc-400">
+              DRIVE <span className="text-[#539242]">GREEN</span>, LIVE <span className="text-[#539242]">CLEAN</span>
             </div>
             <p className="text-sm leading-relaxed text-slate-500 dark:text-zinc-400">
               Smart EV commutes for Kochi's tech workforce. Built for sustainability, scale, and on-time arrival via our restorative, second-life circular infrastructure.
@@ -102,12 +105,15 @@ export default function Footer() {
         {/* 4. CLEAN BOTTOM LEDGER */}
         <div className="mt-16 pt-8 border-t border-slate-200/50 dark:border-white/[0.04] flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-xs tracking-wide text-slate-500 dark:text-zinc-500">
-            © {new Date().getFullYear()} HeadGreen Mobility. All rights reserved.
+            &copy; {new Date().getFullYear()} HeadGreen!&trade; All rights reserved.
           </div>
           <div className="flex items-center gap-6 text-xs text-slate-500 dark:text-zinc-500">
             <Link to="/privacy" className="hover:text-emerald-500 dark:hover:text-teal-400 transition-colors duration-200">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-emerald-500 dark:hover:text-teal-400 transition-colors duration-200">Terms of Service</Link>
           </div>
+        </div>
+        <div className="mt-6 text-center text-xs text-slate-400 dark:text-zinc-600">
+          HeadGreen!&trade; and the HeadGreen logo are trademarks of HeadGreen Mobility.
         </div>
 
       </div>
