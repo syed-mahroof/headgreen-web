@@ -111,8 +111,8 @@ export default function InvestmentTierAd({
 
   // Base styling dynamically applied
   const baseCardClasses = isHero 
-    ? "ita-hero-card bg-gradient-to-b from-white/[0.05] to-transparent border border-[#00e87a]/30 shadow-[0_0_30px_-5px_rgba(0,232,122,0.25)]"
-    : "bg-white/[0.02] border border-white/[0.08] shadow-sm";
+    ? "ita-hero-card bg-gradient-to-b from-slate-50 dark:from-white/[0.05] to-transparent border border-[#00e87a]/30 shadow-[0_0_30px_-5px_rgba(0,232,122,0.25)]"
+    : "bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/[0.08] shadow-xl dark:shadow-sm";
 
   return (
     <>
@@ -153,7 +153,6 @@ export default function InvestmentTierAd({
           opacity: 0; pointer-events: none; transform: translateY(4px);
           transition: all 0.3s ease;
           display: flex; justify-content: center; align-items: center;
-          background: linear-gradient(to top, rgba(5,8,22,0.95), transparent);
         }
         .ita-dots {
           position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%);
@@ -161,7 +160,7 @@ export default function InvestmentTierAd({
         }
         .ita-dot {
           width: 5px; height: 5px; border-radius: 50%;
-          cursor: pointer; border: none; padding: 0; background: rgba(255,255,255,0.2);
+          cursor: pointer; border: none; padding: 0; 
           transition: all 0.3s;
         }
         .ita-dot.ita-dot-active {
@@ -170,8 +169,7 @@ export default function InvestmentTierAd({
         .ita-controls { position: absolute; bottom: 14px; right: 16px; display: flex; gap: 6px; z-index: 20; }
         .ita-ctrl-btn {
           font-size: 10px; padding: 4px 10px; border-radius: 6px; cursor: pointer;
-          background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8);
-          border: 1px solid rgba(255,255,255,0.1);
+          border: 1px solid transparent;
         }
         
         .ita-hover-hint {
@@ -226,16 +224,16 @@ export default function InvestmentTierAd({
         </div>
 
         {/* Global header that stays through scenes */}
-        <div className="absolute top-6 left-6 z-10 opacity-40 pointer-events-none flex items-center gap-2">
+        <div className="absolute top-6 left-6 z-10 opacity-60 dark:opacity-40 pointer-events-none flex items-center gap-2">
            <Icon size={16} color={color} />
-           <span className="text-[10px] font-syne font-bold uppercase tracking-widest text-white/60">
+           <span className="text-[10px] font-syne font-bold uppercase tracking-widest text-slate-500 dark:text-white/60">
              {tierNumber ? `0${tierNumber} • ` : ""}{title}
            </span>
         </div>
 
         {/* Massive faint watermark number */}
         {tierNumber && (
-          <div className="absolute -bottom-4 -right-2 z-0 opacity-[0.03] pointer-events-none font-display font-bold text-[180px] leading-none text-white select-none tracking-tighter">
+          <div className="absolute -bottom-4 -right-2 z-0 opacity-[0.05] dark:opacity-[0.03] pointer-events-none font-display font-bold text-[180px] leading-none text-slate-900 dark:text-white select-none tracking-tighter">
             0{tierNumber}
           </div>
         )}
@@ -249,12 +247,12 @@ export default function InvestmentTierAd({
         <div className="absolute inset-0 z-20 pointer-events-none">
           <div ref={progressBarRef} className="ita-progress-bar" style={{ backgroundColor: color, boxShadow: `0 0 10px ${color}`, width: "0%" }} />
 
-          <div className="ita-controls-container">
+          <div className="ita-controls-container bg-gradient-to-t from-white/90 dark:from-[#050816]/95 to-transparent">
             <div className="ita-dots">
               {Array.from({ length: TOTAL_SCENES }).map((_, i) => (
                 <button
                   key={i}
-                  className={`ita-dot${currentScene === i ? " ita-dot-active" : ""}`}
+                  className={`ita-dot${currentScene === i ? " ita-dot-active" : ""} bg-slate-300 dark:bg-white/20`}
                   style={{ backgroundColor: currentScene === i ? color : undefined }}
                   onClick={(e) => { e.stopPropagation(); goTo(i); }}
                 />
@@ -262,9 +260,9 @@ export default function InvestmentTierAd({
             </div>
 
             <div className="ita-controls">
-              <button className="ita-ctrl-btn hover:bg-white/20" onClick={goPrev}>‹</button>
-              <button className="ita-ctrl-btn hover:bg-white/20" onClick={togglePlay}>{playing ? "⏸" : "▶"}</button>
-              <button className="ita-ctrl-btn hover:bg-white/20" onClick={goNext}>›</button>
+              <button className="ita-ctrl-btn bg-slate-100 dark:bg-white/10 hover:bg-slate-200 dark:hover:bg-white/20 text-slate-700 dark:text-white/80 border-slate-200 dark:border-white/10" onClick={goPrev}>‹</button>
+              <button className="ita-ctrl-btn bg-slate-100 dark:bg-white/10 hover:bg-slate-200 dark:hover:bg-white/20 text-slate-700 dark:text-white/80 border-slate-200 dark:border-white/10" onClick={togglePlay}>{playing ? "⏸" : "▶"}</button>
+              <button className="ita-ctrl-btn bg-slate-100 dark:bg-white/10 hover:bg-slate-200 dark:hover:bg-white/20 text-slate-700 dark:text-white/80 border-slate-200 dark:border-white/10" onClick={goNext}>›</button>
             </div>
           </div>
         </div>

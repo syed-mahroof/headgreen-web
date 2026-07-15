@@ -136,6 +136,12 @@ export default function Partner() {
         
         <SectionLabel className="mb-8 relative z-10">Investment Opportunities</SectionLabel>
         
+        {/* Mobile Swipe Indicator */}
+        <div className="md:hidden flex items-center justify-end px-6 mb-2 text-slate-500 dark:text-slate-400 text-xs font-medium animate-pulse relative z-10">
+          <span>Swipe to view more</span>
+          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        </div>
+
         <div className="relative z-10 -mx-6 px-6 md:mx-0 md:px-0">
           <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-5 pb-8 lg:grid lg:grid-cols-3 lg:gap-6">
             
@@ -152,20 +158,20 @@ export default function Partner() {
                     <div className="h-12 w-12 mx-auto rounded-2xl bg-[#0ea5e9]/10 border border-[#0ea5e9]/20 flex items-center justify-center mb-4 text-[#0ea5e9] shadow-[0_0_15px_rgba(14,165,233,0.2)]">
                       <RefreshCcw size={24} />
                     </div>
-                    <h3 className="font-display text-2xl font-bold text-white mb-2">Refurbished Vehicle</h3>
+                    <h3 className="font-display text-2xl font-bold text-slate-900 dark:text-white mb-2">Refurbished Vehicle</h3>
                     <div className="inline-block px-3 py-1 rounded bg-[#0ea5e9]/10 text-[#0ea5e9] text-[10px] font-bold tracking-widest uppercase border border-[#0ea5e9]/20">
                       Certified Fleet Renewal
                     </div>
                   </div>,
                   <div className="text-center px-4" style={{ animationName: "itaFadeUp", animationDuration: "0.6s", animationFillMode: "both" }}>
-                    <h4 className="text-lg font-bold text-white mb-3">Accelerated Deployment</h4>
-                    <p className="text-slate-400 text-sm leading-relaxed">
+                    <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-3">Accelerated Deployment</h4>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                       Invest in high-quality, lightly used EVs that undergo our rigorous HeadGreen! certification process before deployment.
                     </p>
                   </div>,
                   <div className="text-center px-4" style={{ animationName: "itaFadeUp", animationDuration: "0.6s", animationFillMode: "both" }}>
                     <h4 className="text-[#0ea5e9] text-xl font-bold mb-3">Rapid ROI</h4>
-                    <p className="text-slate-300 text-sm leading-relaxed">
+                    <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
                       Achieve significantly faster returns while maintaining strictly zero-emission corporate standards across all your operations.
                     </p>
                   </div>
@@ -186,20 +192,20 @@ export default function Partner() {
                     <div className="h-12 w-12 mx-auto rounded-2xl bg-[#f59e0b]/10 border border-[#f59e0b]/20 flex items-center justify-center mb-4 text-[#f59e0b] shadow-[0_0_15px_rgba(245,158,11,0.2)]">
                       <CarFront size={24} />
                     </div>
-                    <h3 className="font-display text-2xl font-bold text-white mb-2">New Vehicle Leasing</h3>
+                    <h3 className="font-display text-2xl font-bold text-slate-900 dark:text-white mb-2">New Vehicle Leasing</h3>
                     <div className="inline-block px-3 py-1 rounded bg-[#f59e0b]/10 text-[#f59e0b] text-[10px] font-bold tracking-widest uppercase border border-[#f59e0b]/20">
                       Premium EV Asset Equity
                     </div>
                   </div>,
                   <div className="text-center px-4" style={{ animationName: "itaFadeUp", animationDuration: "0.6s", animationFillMode: "both" }}>
-                    <h4 className="text-lg font-bold text-white mb-3">Brand-New Fleet Injection</h4>
-                    <p className="text-slate-400 text-sm leading-relaxed">
+                    <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-3">Brand-New Fleet Injection</h4>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                       Direct investment in brand-new, top-tier electric vehicles (e.g. Kia Carens EV) injected directly into our fleet operations.
                     </p>
                   </div>,
                   <div className="text-center px-4" style={{ animationName: "itaFadeUp", animationDuration: "0.6s", animationFillMode: "both" }}>
                     <h4 className="text-[#f59e0b] text-xl font-bold mb-3">Guaranteed Yields</h4>
-                    <p className="text-slate-300 text-sm leading-relaxed">
+                    <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
                       Enjoy highly consistent, contract-backed monthly yields powered seamlessly by our elite B2B corporate clientele.
                     </p>
                   </div>
@@ -221,20 +227,20 @@ export default function Partner() {
                     <div className="h-12 w-12 mx-auto rounded-2xl bg-[#00e87a]/20 border border-[#00e87a]/40 flex items-center justify-center mb-4 text-[#00e87a] shadow-[0_0_20px_rgba(0,232,122,0.4)]">
                       <Zap size={24} />
                     </div>
-                    <h3 className="font-display text-2xl font-bold text-white mb-2">Infrastructure Investment</h3>
+                    <h3 className="font-display text-2xl font-bold text-slate-900 dark:text-white mb-2">Infrastructure Investment</h3>
                     <div className="inline-block px-3 py-1 rounded bg-[#00e87a]/20 text-[#00e87a] text-[10px] font-bold tracking-widest uppercase border border-[#00e87a]/30 shadow-[0_0_10px_rgba(0,232,122,0.2)]">
                       Core Seed Fund
                     </div>
                   </div>,
                   <div className="text-center px-4" style={{ animationName: "itaFadeUp", animationDuration: "0.6s", animationFillMode: "both" }}>
-                    <h4 className="text-lg font-bold text-white mb-3">Foundational Partner</h4>
-                    <p className="text-slate-400 text-sm leading-relaxed">
+                    <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-3">Foundational Partner</h4>
+                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                       Seed fund our proprietary charging hubs, scalable tech stacks, and core operational expansions across the city.
                     </p>
                   </div>,
                   <div className="text-center px-4" style={{ animationName: "itaFadeUp", animationDuration: "0.6s", animationFillMode: "both" }}>
                     <h4 className="text-[#00e87a] text-xl font-bold mb-3">Overarching Growth</h4>
-                    <p className="text-slate-200 text-sm leading-relaxed">
+                    <p className="text-slate-800 dark:text-slate-200 text-sm leading-relaxed">
                       Your capital fuels the very grid that keeps our fleet moving, offering overarching, company-wide growth participation.
                     </p>
                   </div>
