@@ -239,8 +239,8 @@ export default function Careers() {
             
             <div className="relative p-8 md:p-14">
               <div className="text-center mb-10">
-                <h2 className="text-3xl font-bold mb-3">Partner Application</h2>
-                <p className="text-slate-600 dark:text-slate-400">Fill out the details below to start your journey.</p>
+                <h2 className="text-3xl font-bold mb-3">Career Application</h2>
+                <p className="text-slate-600 dark:text-slate-400">Fill out the details below to start your career with us.</p>
               </div>
 
               {isSuccess ? (

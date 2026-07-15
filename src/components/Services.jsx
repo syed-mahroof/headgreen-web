@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Reveal, stagger, fadeUp } from "./motion.jsx";
 import { SERVICES } from "../data/site.js";
 import { ArrowUpRight, Building2, Plane, Bus, Clock, MapPin, Users } from "lucide-react";
 import { SectionLabel } from "./SectionLabel.jsx";
+
+const MotionLink = motion(Link);
 
 // Mini SVG route path for the hero card
 function RouteMicroVisual() {
@@ -87,27 +90,27 @@ function DepartureBoard() {
 const BENTO_SERVICES = [
   {
     icon: Building2, title: "Corporate Employee Transport", desc: "Reliable daily commute for entire teams — from door to campus and back.",
-    span: "md:col-span-2", tall: false, hero: true,
+    span: "md:col-span-2", tall: false, hero: true, to: "/corporate",
   },
   {
     icon: Plane, title: "Airport Transfer", desc: "On-time pickups for COK & domestic travel.",
-    span: "", tall: false, board: true,
+    span: "", tall: false, board: true, to: "/airport-transfer",
   },
   {
     icon: Bus, title: "Tech Park Shuttle", desc: "Optimised high-frequency shuttles into Infopark & SmartCity campuses.",
-    span: "", tall: true, ring: true,
+    span: "", tall: true, ring: true, to: "/kochi-infopark",
   },
   {
     icon: Clock, title: "Shift Based Cab Services", desc: "24/7 coverage with safe, verified night shifts.",
-    span: "", tall: false,
+    span: "", tall: false, to: "/book",
   },
   {
     icon: MapPin, title: "Outstation Trips", desc: "Long-distance EV trips across Kerala.",
-    span: "", tall: false,
+    span: "", tall: false, to: "/book",
   },
   {
     icon: Users, title: "Daily Employee Pickup", desc: "Optimized door-to-door pickup with AI routing.",
-    span: "", tall: false,
+    span: "", tall: false, to: "/corporate",
   },
 ];
 
@@ -130,9 +133,10 @@ export default function Services() {
         variants={stagger(0.06)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.1 }}
         className="grid gap-4 md:grid-cols-3 auto-rows-auto"
       >
-        {BENTO_SERVICES.map(({ icon: Icon, title, desc, span, tall, hero, ring, board }) => (
-          <motion.div
+        {BENTO_SERVICES.map(({ icon: Icon, title, desc, span, tall, hero, ring, board, to }) => (
+          <MotionLink
             key={title}
+            to={to}
             variants={fadeUp}
             className={[
               "group relative overflow-hidden rounded-3xl p-6 flex flex-col",
@@ -192,7 +196,7 @@ export default function Services() {
 
             {/* Airport departure board */}
             {board && <DepartureBoard />}
-          </motion.div>
+          </MotionLink>
         ))}
       </motion.div>
     </section>

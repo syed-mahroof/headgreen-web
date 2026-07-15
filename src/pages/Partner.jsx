@@ -41,8 +41,8 @@ const BENEFITS = [
 
 // ─── Blank state ──────────────────────────────────────────────────
 const EMPTY = {
-  name: "", phone: "", vehicleType: "EV Sedan",
-  vehicleNumber: "", experience: "", location: "", notes: "",
+  name: "", phone: "", partnerType: "Refurbished Vehicle",
+  companyName: "", location: "", notes: "",
 };
 
 // ─── Page ─────────────────────────────────────────────────────────
@@ -60,7 +60,6 @@ export default function Partner() {
 
   const isValid =
     fields.name.trim() && fields.phone.trim() &&
-    fields.vehicleNumber.trim() && fields.experience.trim() &&
     fields.location.trim();
 
   const handleSubmit = async (e) => {
@@ -79,15 +78,14 @@ export default function Partner() {
       setErrMsg("");
       try {
         await submitToWeb3Forms(
-          `New Driver Application — ${fields.name}`,
-          "HeadGreen! Automated Dispatch",
+          `New Partner Application — ${fields.name}`,
+          "HeadGreen! Partnerships",
           {
-            "Driver Name":        fields.name,
+            "Partner Name":       fields.name,
             "Phone":              fields.phone,
-            "Vehicle Type":       fields.vehicleType,
-            "Vehicle Reg. No.":   fields.vehicleNumber,
-            "Experience (yrs)":   fields.experience,
-            "Home Location":      fields.location,
+            "Partnership Type":   fields.partnerType,
+            "Company Name":       fields.companyName || "—",
+            "Location":           fields.location,
             "Additional Notes":   fields.notes || "—",
           }
         );
@@ -100,14 +98,13 @@ export default function Partner() {
         setSubmit(false);
       }
     } else {
-      openWhatsApp(buildWhatsAppMessage("DRIVER APPLICATION", {
-        "Name":           fields.name,
-        "Phone":          fields.phone,
-        "Vehicle Type":   fields.vehicleType,
-        "Vehicle No.":    fields.vehicleNumber,
-        "Experience":     `${fields.experience} yrs`,
-        "Location":       fields.location,
-        "Notes":          fields.notes || undefined,
+      openWhatsApp(buildWhatsAppMessage("PARTNER APPLICATION", {
+        "Name":             fields.name,
+        "Phone":            fields.phone,
+        "Partnership Type": fields.partnerType,
+        "Company Name":     fields.companyName || "—",
+        "Location":         fields.location,
+        "Notes":            fields.notes || undefined,
       }));
     }
   };
@@ -283,9 +280,9 @@ export default function Partner() {
       <section className="section pt-4 pb-24">
         <div className="mx-auto max-w-4xl">
           <div className="rounded-3xl bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/[0.07] shadow-sm dark:shadow-none p-8 md:p-10">
-            <SectionLabel>Driver Application</SectionLabel>
+            <SectionLabel>Partner Application</SectionLabel>
             <h2 className="mt-4 font-syne text-xl font-semibold text-slate-900 dark:text-white">
-              Tell us about you and your vehicle
+              Tell us about your investment or partnership interest
             </h2>
 
             <AnimatePresence mode="wait">
@@ -316,27 +313,23 @@ export default function Partner() {
                         value={fields.phone} onChange={set("phone")} required />
                     </div>
                     <div>
-                      <label className="label-base" htmlFor="pa-vtype">Vehicle Type</label>
-                      <select id="pa-vtype" className="input-base"
-                        value={fields.vehicleType} onChange={set("vehicleType")}>
-                        <option>EV Sedan</option>
-                        <option>EV Hatchback</option>
-                        <option>EV SUV</option>
-                        <option>EV Shuttle / Van</option>
+                      <label className="label-base" htmlFor="pa-ptype">Partnership Type</label>
+                      <select id="pa-ptype" className="input-base"
+                        value={fields.partnerType} onChange={set("partnerType")}>
+                        <option className="bg-white dark:bg-[#090d1a]">Refurbished Vehicle</option>
+                        <option className="bg-white dark:bg-[#090d1a]">New Vehicle Leasing</option>
+                        <option className="bg-white dark:bg-[#090d1a]">Infrastructure</option>
+                        <option className="bg-white dark:bg-[#090d1a]">Corporate Fleet Owner</option>
+                        <option className="bg-white dark:bg-[#090d1a]">Other</option>
                       </select>
                     </div>
                     <div>
-                      <label className="label-base" htmlFor="pa-vreg">Vehicle Registration</label>
-                      <input id="pa-vreg" className="input-base font-mono" placeholder="KL-07-EV-1234"
-                        value={fields.vehicleNumber} onChange={set("vehicleNumber")} required />
+                      <label className="label-base" htmlFor="pa-company">Company Name</label>
+                      <input id="pa-company" className="input-base" placeholder="Your company or entity"
+                        value={fields.companyName} onChange={set("companyName")} />
                     </div>
                     <div>
-                      <label className="label-base" htmlFor="pa-exp">Driving Experience (years)</label>
-                      <input id="pa-exp" type="number" min="0" className="input-base font-mono text-emerald-600 dark:text-emerald-400"
-                        placeholder="5" value={fields.experience} onChange={set("experience")} required />
-                    </div>
-                    <div>
-                      <label className="label-base" htmlFor="pa-loc">Your Home Location</label>
+                      <label className="label-base" htmlFor="pa-loc">Location</label>
                       <input id="pa-loc" className="input-base" placeholder="Kakkanad, Ernakulam..."
                         value={fields.location} onChange={set("location")} required />
                     </div>

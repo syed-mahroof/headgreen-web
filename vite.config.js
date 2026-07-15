@@ -18,7 +18,8 @@ export default defineConfig({
         "/terms",
         "/blog",
         "/kochi-infopark",
-        "/smartcity-kakkanad"
+        "/smartcity-kakkanad",
+        "/airport-transfer"
       ],
       changefreq: "weekly",
       priority: 0.8,
